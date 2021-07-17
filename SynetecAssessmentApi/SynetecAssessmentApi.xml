@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SynetecAssessmentApi</name>
+    </assembly>
+    <members>
+        <member name="T:SynetecAssessmentApi.Controllers.BonusPoolController">
+            <summary>
+            Controller for <see cref="T:SynetecAssessmentApi.Controllers.BonusPoolController"/>
+            </summary>
+        </member>
+        <member name="M:SynetecAssessmentApi.Controllers.BonusPoolController.#ctor(SynetecAssessmentApi.Services.IBonusPoolService,SynetecAssessmentApi.Logging.ILogger)">
+            <summary>
+            Constructor for <see cref="T:SynetecAssessmentApi.Controllers.BonusPoolController"/>
+            </summary>
+            <param name="bonusPoolService"><see cref="T:SynetecAssessmentApi.Services.IBonusPoolService"/></param>
+            <param name="logger"><see cref="T:SynetecAssessmentApi.Logging.ILogger"/></param>
+        </member>
+        <member name="M:SynetecAssessmentApi.Controllers.BonusPoolController.CalculateBonus(SynetecAssessmentApi.Dtos.CalculateBonusDto)">
+            <summary>
+            Caclulates Bonus for <see cref="T:SynetecAssessmentApi.Dtos.CalculateBonusDto"/>
+            </summary>
+            <param name="request"><see cref="T:SynetecAssessmentApi.Dtos.CalculateBonusDto"/></param>
+            <returns><see cref="T:SynetecAssessmentApi.Dtos.BonusPoolCalculatorResultDto"/> with employee details and bonus amount</returns>
+        </member>
+        <member name="T:SynetecAssessmentApi.Controllers.EmployeeController">
+            <summary>
+            Controller for <see cref="T:SynetecAssessmentApi.Controllers.EmployeeController"/>
+            </summary>
+        </member>
+        <member name="M:SynetecAssessmentApi.Controllers.EmployeeController.#ctor(SynetecAssessmentApi.Services.IEmployeeService,SynetecAssessmentApi.Logging.ILogger)">
+            <summary>
+            Constructor for <see cref="T:SynetecAssessmentApi.Controllers.EmployeeController"/>
+            </summary>
+            <param name="employeeService"><see cref="T:SynetecAssessmentApi.Services.IEmployeeService"/></param>
+            <param name="logger"><see cref="T:SynetecAssessmentApi.Logging.ILogger"/></param>
+        </member>
+        <member name="M:SynetecAssessmentApi.Controllers.EmployeeController.GetAll">
+            <summary>
+            Get All employees details
+            </summary>
+            <returns>Collection of Employee details</returns>
+        </member>
+        <member name="T:SynetecAssessmentApi.Logging.ILogger">
+            <summary>
+            Logger Interface
+            </summary>
+        </member>
+        <member name="M:SynetecAssessmentApi.Logging.ILogger.Debug(System.String)">
+            <summary>
+            Logs message used for debugging purpose
+            </summary>
+            <param name="message">Log text</param>
+        </member>
+        <member name="M:SynetecAssessmentApi.Logging.ILogger.Info(System.String)">
+            <summary>
+            Logs message used as Information
+            </summary>
+            <param name="message">Log text</param>
+        </member>
+        <member name="M:SynetecAssessmentApi.Logging.ILogger.Error(System.String)">
+            <summary>
+            Logs Error message
+            </summary>
+            <param name="message">Log text</param>
+        </member>
+        <member name="M:SynetecAssessmentApi.Logging.ILogger.Warn(System.String)">
+            <summary>
+            Logs message used as Warning
+            </summary>
+            <param name="message">Log text</param>
+        </member>
+        <member name="T:SynetecAssessmentApi.Logging.Logger">
+            <summary>
+            Logger class
+            </summary>
+        </member>
+        <member name="M:SynetecAssessmentApi.Logging.Logger.#ctor">
+            <summary>
+            Constructor for loading Log4Net
+            </summary>
+        </member>
+        <member name="M:SynetecAssessmentApi.Logging.Logger.#ctor(log4net.ILog)">
+            <summary>
+            Constructor for <see cref="T:SynetecAssessmentApi.Logging.Logger"/>
+            </summary>
+            <param name="logger"><see cref="T:log4net.ILog"/></param>
+        </member>
+        <member name="M:SynetecAssessmentApi.Logging.Logger.Debug(System.String)">
+            <summary>
+            Logs message used for debugging purpose
+            </summary>
+            <param name="message">Log text</param>
+        </member>
+        <member name="M:SynetecAssessmentApi.Logging.Logger.Info(System.String)">
+            <summary>
+            Logs message used as Information
+            </summary>
+            <param name="message">Log text</param>
+        </member>
+        <member name="M:SynetecAssessmentApi.Logging.Logger.Error(System.String)">
+            <summary>
+            Logs Error message
+            </summary>
+            <param name="message">Log text</param>
+        </member>
+        <member name="M:SynetecAssessmentApi.Logging.Logger.Warn(System.String)">
+            <summary>
+            Logs message used as Warning
+            </summary>
+            <param name="message">Log text</param>
+        </member>
+        <member name="T:SynetecAssessmentApi.MapProfile">
+            <summary>
+            MapProfile class
+            </summary>
+        </member>
+        <member name="M:SynetecAssessmentApi.MapProfile.#ctor">
+            <summary>
+            Map Profile for automapper
+            </summary>
+        </member>
+        <member name="T:SynetecAssessmentApi.Program">
+            <summary>
+            Main Entry Class
+            </summary>
+        </member>
+        <member name="M:SynetecAssessmentApi.Program.Main(System.String[])">
+            <summary>
+            Entry method for startup
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:SynetecAssessmentApi.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            CreateHostBuilder method
+            </summary>
+            <param name="args"></param>
+            <returns><see cref="T:Microsoft.Extensions.Hosting.IHostBuilder"/></returns>
+        </member>
+        <member name="T:SynetecAssessmentApi.Services.BonusPoolService">
+            <summary>
+            BonusPoolService class
+            </summary>
+        </member>
+        <member name="M:SynetecAssessmentApi.Services.BonusPoolService.#ctor(SynetecAssessmentApi.Persistence.AppDbContext,SynetecAssessmentApi.Logging.ILogger,AutoMapper.IMapper,SynetecAssessmentApi.Services.IEmployeeService)">
+            <summary>
+            Constructor for <see cref="T:SynetecAssessmentApi.Services.BonusPoolService"/>
+            </summary>
+            <param name="dbContext">DI for <see cref="T:SynetecAssessmentApi.Persistence.AppDbContext"/></param>
+            <param name="logger">DI for <see cref="T:SynetecAssessmentApi.Logging.ILogger"/></param>
+            <param name="mapper">DI for <see cref="T:AutoMapper.IMapper"/></param>
+            <param name="employeeService">DI for <see cref="T:SynetecAssessmentApi.Services.IEmployeeService"/></param>
+        </member>
+        <member name="M:SynetecAssessmentApi.Services.BonusPoolService.CalculateAsync(System.Int32,System.Int32)">
+            <summary>
+            Caculates bonus amount for an employee based on input details
+            </summary>
+            <param name="bonusPoolAmount">Total Bonus Amount</param>
+            <param name="selectedEmployeeId">Employee Id</param>
+            <returns><see cref="T:SynetecAssessmentApi.Dtos.BonusPoolCalculatorResultDto"/></returns>
+        </member>
+        <member name="T:SynetecAssessmentApi.Services.EmployeeService">
+            <summary>
+            EmployeeService class
+            </summary>
+        </member>
+        <member name="M:SynetecAssessmentApi.Services.EmployeeService.#ctor(SynetecAssessmentApi.Persistence.AppDbContext,SynetecAssessmentApi.Logging.ILogger,AutoMapper.IMapper)">
+            <summary>
+            Constructor for <see cref="T:SynetecAssessmentApi.Services.EmployeeService"/>
+            </summary>
+            <param name="dbContext">DI for <see cref="T:SynetecAssessmentApi.Persistence.AppDbContext"/></param>
+            <param name="logger">DI for <see cref="T:SynetecAssessmentApi.Logging.ILogger"/></param>
+            <param name="mapper">DI for <see cref="T:AutoMapper.IMapper"/></param>
+        </member>
+        <member name="M:SynetecAssessmentApi.Services.EmployeeService.GetEmployeesAsync">
+            <summary>
+            Gets employee details
+            </summary>
+            <returns>Collection of <see cref="T:SynetecAssessmentApi.Dtos.EmployeeDto"/></returns>
+        </member>
+        <member name="M:SynetecAssessmentApi.Services.EmployeeService.GetEmployeeById(System.Int32)">
+            <summary>
+            Get's Employee details based in employee ID
+            </summary>
+            <param name="selectedEmployeeId">Employee Id</param>
+            <returns><see cref="T:SynetecAssessmentApi.Domain.Employee"/></returns>
+        </member>
+        <member name="M:SynetecAssessmentApi.Services.EmployeeService.GetTotalEmployeeSalary">
+            <summary>
+            Sum of all employee salary
+            </summary>
+            <returns>Sum of Employees salary</returns>
+        </member>
+        <member name="T:SynetecAssessmentApi.Services.IEmployeeService">
+            <summary>
+            Interface for EmployeeService
+            </summary>
+        </member>
+        <member name="M:SynetecAssessmentApi.Services.IEmployeeService.GetEmployeesAsync">
+            <summary>
+            Gets employee details
+            </summary>
+            <returns>Collection of <see cref="T:SynetecAssessmentApi.Dtos.EmployeeDto"/></returns>
+        </member>
+    </members>
+</doc>

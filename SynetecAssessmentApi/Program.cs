@@ -5,8 +5,15 @@ using SynetecAssessmentApi.Persistence;
 
 namespace SynetecAssessmentApi
 {
+    /// <summary>
+    /// Main Entry Class
+    /// </summary>
     public class Program
     {
+        /// <summary>
+        /// Entry method for startup
+        /// </summary>
+        /// <param name="args"></param>
         public static void Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
@@ -22,6 +29,11 @@ namespace SynetecAssessmentApi
             host.Run();
         }
 
+        /// <summary>
+        /// CreateHostBuilder method
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns><see cref="IHostBuilder"/></returns>
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
