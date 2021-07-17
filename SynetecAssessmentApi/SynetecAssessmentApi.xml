@@ -143,11 +143,10 @@
             BonusPoolService class
             </summary>
         </member>
-        <member name="M:SynetecAssessmentApi.Services.BonusPoolService.#ctor(SynetecAssessmentApi.Persistence.AppDbContext,SynetecAssessmentApi.Logging.ILogger,AutoMapper.IMapper,SynetecAssessmentApi.Services.IEmployeeService)">
+        <member name="M:SynetecAssessmentApi.Services.BonusPoolService.#ctor(SynetecAssessmentApi.Logging.ILogger,AutoMapper.IMapper,SynetecAssessmentApi.Services.IEmployeeService)">
             <summary>
             Constructor for <see cref="T:SynetecAssessmentApi.Services.BonusPoolService"/>
             </summary>
-            <param name="dbContext">DI for <see cref="T:SynetecAssessmentApi.Persistence.AppDbContext"/></param>
             <param name="logger">DI for <see cref="T:SynetecAssessmentApi.Logging.ILogger"/></param>
             <param name="mapper">DI for <see cref="T:AutoMapper.IMapper"/></param>
             <param name="employeeService">DI for <see cref="T:SynetecAssessmentApi.Services.IEmployeeService"/></param>

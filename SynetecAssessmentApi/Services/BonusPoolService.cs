@@ -13,7 +13,6 @@ namespace SynetecAssessmentApi.Services
     /// </summary>
     public class BonusPoolService : IBonusPoolService
     {
-        private readonly AppDbContext _dbContext;
         private readonly ILogger _logger;
         private readonly IMapper _mapper;
         private readonly IEmployeeService _employeeService;
@@ -21,13 +20,11 @@ namespace SynetecAssessmentApi.Services
         /// <summary>
         /// Constructor for <see cref="BonusPoolService"/>
         /// </summary>
-        /// <param name="dbContext">DI for <see cref="AppDbContext"/></param>
         /// <param name="logger">DI for <see cref="ILogger"/></param>
         /// <param name="mapper">DI for <see cref="IMapper"/></param>
         /// <param name="employeeService">DI for <see cref="IEmployeeService"/></param>
-        public BonusPoolService(AppDbContext dbContext, ILogger logger, IMapper mapper, IEmployeeService employeeService)
+        public BonusPoolService(ILogger logger, IMapper mapper, IEmployeeService employeeService)
         {
-            _dbContext = dbContext;
             _logger = logger;
             _mapper = mapper;
             _employeeService = employeeService;
